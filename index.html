@@ -1,154 +1,145 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>许伊琳 | 数字经济 & 数据分析个人主页</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-        body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: #f1f5f9; }
-        .glass-card { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); }
-        .gradient-text { background: linear-gradient(90deg, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .skill-tag { background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.2); }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>许伊琳 | 数据分析 & AI实践</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'PingFang SC', sans-serif; background: #f5f7fa; color: #333; }
+    
+    header {
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+    header p { font-size: 1.1rem; opacity: 0.9; margin-bottom: 6px; }
+    .tag {
+      display: inline-block;
+      background: rgba(255,255,255,0.2);
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin: 4px;
+      font-size: 0.9rem;
+    }
+
+    .container { max-width: 860px; margin: 0 auto; padding: 40px 20px; }
+
+    .section { background: white; border-radius: 12px; padding: 30px; margin-bottom: 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+    .section h2 { font-size: 1.3rem; color: #667eea; margin-bottom: 20px; border-left: 4px solid #667eea; padding-left: 12px; }
+
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+    .skill-card { background: #f8f9ff; border-radius: 10px; padding: 20px; }
+    .skill-card h3 { font-size: 1rem; margin-bottom: 8px; color: #444; }
+    .skill-card p { font-size: 0.88rem; color: #666; line-height: 1.6; }
+
+    .project { border-left: 3px solid #667eea; padding-left: 16px; margin-bottom: 20px; }
+    .project h3 { font-size: 1rem; font-weight: 600; margin-bottom: 4px; }
+    .project .meta { font-size: 0.82rem; color: #888; margin-bottom: 8px; }
+    .project ul { padding-left: 16px; }
+    .project ul li { font-size: 0.88rem; color: #555; line-height: 1.8; }
+
+    .contact-links { display: flex; gap: 16px; flex-wrap: wrap; }
+    .contact-links a {
+      background: #667eea;
+      color: white;
+      padding: 10px 24px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    footer { text-align: center; padding: 30px; color: #aaa; font-size: 0.85rem; }
+  </style>
 </head>
-<body class="leading-relaxed antialiased">
+<body>
 
-    <nav class="fixed top-0 w-full z-50 px-6 py-4 flex justify-between items-center glass-card">
-        <div class="text-xl font-bold gradient-text">YILIN.XU</div>
-        <div class="space-x-6 hidden md:flex text-sm font-medium">
-            <a href="#about" class="hover:text-sky-400 transition">关于</a>
-            <a href="#experience" class="hover:text-sky-400 transition">经历</a>
-            <a href="#projects" class="hover:text-sky-400 transition">项目</a>
-            <a href="#skills" class="hover:text-sky-400 transition">技能</a>
-        </div>
-    </nav>
+<header>
+  <h1>许伊琳</h1>
+  <p>广东外语外贸大学 · 数字经济专业 · GPA 3.6（前10%）</p>
+  <p>CET-6 · 校级三等奖学金 · 全国计算机二级</p>
+  <div style="margin-top:16px">
+    <span class="tag">数据分析</span>
+    <span class="tag">AI实践</span>
+    <span class="tag">可视化</span>
+    <span class="tag">Prompt Engineering</span>
+    <span class="tag">SQL</span>
+  </div>
+</header>
 
-    <section id="about" class="pt-32 pb-20 px-6 max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-12">
-        <div class="flex-1 space-y-6">
-            <h2 class="text-blue-400 font-mono tracking-widest text-sm uppercase">Hello, I am</h2>
-            <h1 class="text-5xl md:text-6xl font-bold">许伊琳</h1>
-            <p class="text-xl text-slate-400">广东外语外贸大学 · 数字经济专业 [cite: 1]</p>
-            <p class="text-lg text-slate-300 max-w-2xl">
-                专注数据驱动决策的探索者。擅长利用 <span class="text-sky-400 font-semibold">SQL/Tableau</span> 挖掘增长机会，
-                并具备 <span class="text-indigo-400 font-semibold">AI Agent</span> 构建经验，致力于将复杂数据转化为业务增长动力。 [cite: 1]
-            </p>
-            <div class="flex gap-4">
-                <a href="mailto:3472888681@qq.com" class="bg-sky-600 hover:bg-sky-500 px-6 py-3 rounded-full font-medium transition flex items-center gap-2">
-                    <i class="fas fa-envelope"></i> 联系我
-                </a>
-                <div class="flex items-center gap-4 text-2xl text-slate-400 px-4">
-                    <i class="fab fa-weixin hover:text-green-400 cursor-pointer"></i>
-                    <i class="fab fa-github hover:text-white cursor-pointer"></i>
-                </div>
-            </div>
-        </div>
-        <div class="w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden border-4 border-slate-700 shadow-2xl relative">
-            <img src="https://via.placeholder.com/400x400/1e293b/38bdf8?text=Yilin+Xu" alt="许伊琳" class="object-cover w-full h-full">
-            <div class="absolute bottom-0 bg-slate-900/80 w-full py-2 text-center text-xs text-slate-400">数字经济专业前10% [cite: 1]</div>
-        </div>
-    </section>
+<div class="container">
 
-    <section id="experience" class="py-20 px-6 max-w-5xl mx-auto">
-        <h3 class="text-3xl font-bold mb-12 flex items-center gap-4">
-            <span class="w-12 h-1 bg-sky-500 rounded"></span> 实践经历
-        </h3>
-        <div class="space-y-8">
-            <div class="glass-card p-6 rounded-xl hover:translate-x-2 transition duration-300">
-                <div class="flex justify-between items-start mb-4">
-                    <div>
-                        <h4 class="text-xl font-bold text-sky-400">运营助理</h4>
-                        <p class="text-slate-400">广州标策工坊文化创意有限公司 [cite: 1]</p>
-                    </div>
-                    <span class="text-sm text-slate-500 font-mono">2025.04 - 2026.02</span>
-                </div>
-                <ul class="list-disc list-inside text-slate-300 space-y-2 text-sm">
-                    <li>通过 A/B Test 优化内容策略，使账号互动率提升 20% [cite: 1]</li>
-                    <li>利用 Excel 数据透视表分析 200+ 客户行为特征 [cite: 1]</li>
-                </ul>
-            </div>
-            <div class="glass-card p-6 rounded-xl border-l-4 border-indigo-500">
-                <div class="flex justify-between items-start mb-4">
-                    <div>
-                        <h4 class="text-xl font-bold text-indigo-400">副部长</h4>
-                        <p class="text-slate-400">创新创业实践基地 [cite: 1]</p>
-                    </div>
-                    <span class="text-sm text-slate-500 font-mono">2024.09 - 2025.06</span>
-                </div>
-                <p class="text-sm text-slate-300">参与 30+ 创业项目调研，建立市场规模与商业模式评估模型 [cite: 1]</p>
-            </div>
-        </div>
-    </section>
+  <div class="section">
+    <h2>个人技能</h2>
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h3>📊 数据分析</h3>
+        <p>SQL多表关联、GROUP BY聚合；Excel VLOOKUP、数据透视表；数据清洗与统计</p>
+      </div>
+      <div class="skill-card">
+        <h3>📈 数据可视化</h3>
+        <p>Tableau / Power BI 动态仪表盘搭建，直观展示业务趋势</p>
+      </div>
+      <div class="skill-card">
+        <h3>🤖 AI实践</h3>
+        <p>Prompt Engineering优化；AI智能体与知识库搭建；提升团队办公效率</p>
+      </div>
+      <div class="skill-card">
+        <h3>💻 编程基础</h3>
+        <p>Python基础语法，数据读取与处理；了解前端HTML/CSS</p>
+      </div>
+    </div>
+  </div>
 
-    <section id="projects" class="py-20 bg-slate-900/50">
-        <div class="max-w-5xl mx-auto px-6">
-            <h3 class="text-3xl font-bold mb-12 flex items-center gap-4 justify-end">
-                项目成果 <span class="w-12 h-1 bg-indigo-500 rounded"></span>
-            </h3>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="glass-card rounded-2xl overflow-hidden group">
-                    <div class="h-48 bg-gradient-to-br from-sky-900 to-slate-800 flex items-center justify-center">
-                        <i class="fas fa-chart-pie text-6xl text-sky-500/40 group-hover:scale-110 transition"></i>
-                    </div>
-                    <div class="p-6">
-                        <h4 class="text-xl font-bold mb-2">名创优品销售数据可视化</h4>
-                        <p class="text-sm text-slate-400 mb-4">使用 SQL 处理 2 万条销售数据，通过 Tableau 搭建交互式仪表盘，识别二线城市增长机会。 [cite: 1]</p>
-                        <div class="flex gap-2 flex-wrap">
-                            <span class="skill-tag px-3 py-1 rounded text-xs text-sky-400">SQL</span>
-                            <span class="skill-tag px-3 py-1 rounded text-xs text-sky-400">Tableau</span>
-                            <span class="skill-tag px-3 py-1 rounded text-xs text-sky-400">数据清洗</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="glass-card rounded-2xl overflow-hidden group">
-                    <div class="h-48 bg-gradient-to-br from-indigo-900 to-slate-800 flex items-center justify-center">
-                        <i class="fas fa-robot text-6xl text-indigo-500/40 group-hover:scale-110 transition"></i>
-                    </div>
-                    <div class="p-6">
-                        <h4 class="text-xl font-bold mb-2">AI 智能体构建与实践</h4>
-                        <p class="text-sm text-slate-400 mb-4">基于 AI 平台搭建垂直领域知识库，通过 Prompt 优化提升检索准确率，文本处理效率提升 50%。 [cite: 1]</p>
-                        <div class="flex gap-2 flex-wrap">
-                            <span class="skill-tag px-3 py-1 rounded text-xs text-indigo-400">Prompt Engineering</span>
-                            <span class="skill-tag px-3 py-1 rounded text-xs text-indigo-400">AI Agent</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <div class="section">
+    <h2>项目经历</h2>
+    <div class="project">
+      <h3>名创优品门店销售数据分析与可视化决策支持</h3>
+      <div class="meta">2026.01 - 2026.03 · 项目负责人</div>
+      <ul>
+        <li>使用SQL处理约2万条原始销售数据，完成去重、格式统一及多维指标聚合</li>
+        <li>构建销售KPI指标体系，识别美妆类产品为核心增长点</li>
+        <li>Tableau搭建动态交互仪表盘，协助发现二线城市增长机会</li>
+        <li>提出品类资源倾斜策略，为门店季度补货与市场拓展提供数据支持</li>
+      </ul>
+    </div>
+    <div class="project">
+      <h3>基于知识库的AI智能体构建与应用实践</h3>
+      <div class="meta">2025.09 - 2026.01 · 项目负责人</div>
+      <ul>
+        <li>从0到1搭建垂直领域知识库智能体</li>
+        <li>通过Prompt Engineering优化提示词链路，解决模型幻觉</li>
+        <li>团队文本处理效率提升约50%，实现输出格式标准化</li>
+      </ul>
+    </div>
+  </div>
 
-    <section id="skills" class="py-20 px-6 max-w-5xl mx-auto text-center">
-        <h3 class="text-3xl font-bold mb-12">技能 & 证书</h3>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div class="p-4 glass-card rounded-xl">
-                <i class="fas fa-database text-sky-400 text-3xl mb-3"></i>
-                <h5 class="font-bold">SQL</h5>
-                <p class="text-xs text-slate-500">JOIN, Group By, 聚合分析 [cite: 1]</p>
-            </div>
-            <div class="p-4 glass-card rounded-xl">
-                <i class="fas fa-table text-green-400 text-3xl mb-3"></i>
-                <h5 class="font-bold">Excel</h5>
-                <p class="text-xs text-slate-500">VLOOKUP, 数据透视表 [cite: 1]</p>
-            </div>
-            <div class="p-4 glass-card rounded-xl">
-                <i class="fas fa-brain text-purple-400 text-3xl mb-3"></i>
-                <h5 class="font-bold">AI Practice</h5>
-                <p class="text-xs text-slate-500">Prompt 优化, Agent 搭建 [cite: 1]</p>
-            </div>
-            <div class="p-4 glass-card rounded-xl">
-                <i class="fas fa-certificate text-yellow-400 text-3xl mb-3"></i>
-                <h5 class="font-bold">Certificates</h5>
-                <p class="text-xs text-slate-500">CET-6, 计算机二级 [cite: 1]</p>
-            </div>
-        </div>
-    </section>
+  <div class="section">
+    <h2>实习经历</h2>
+    <div class="project">
+      <h3>广州标策工坊文化创意有限公司 · 运营助理</h3>
+      <div class="meta">2025.04 - 2026.02</div>
+      <ul>
+        <li>整理200+条客户数据，利用Excel数据透视表进行用户行为特征分析</li>
+        <li>A/B Test对比内容发布策略，账号阅读量与互动率提升20%</li>
+        <li>负责周度/月度运营报表，将非结构化反馈转化为结构化建议</li>
+      </ul>
+    </div>
+  </div>
 
-    <footer class="py-12 border-t border-slate-800 text-center text-slate-500 text-sm">
-        <p>© 2026 许伊琳. 设计与代码由 Gemini 协同完成</p>
-        <p class="mt-2 text-xs">Based in Guangzhou, GD</p>
-    </footer>
+  <div class="section">
+    <h2>联系我</h2>
+    <p style="margin-bottom:16px; color:#666;">欢迎实习/项目合作机会，立即到岗，可实习4个月以上</p>
+    <div class="contact-links">
+      <a href="mailto:3472888681@qq.com">📮 发邮件联系</a>
+    </div>
+  </div>
+
+</div>
+
+<footer>© 2026 许伊琳 · 用代码构建未来</footer>
 
 </body>
 </html>
