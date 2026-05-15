@@ -5,28 +5,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yilin Xu | 数据分析 & AI实践个人主页</title>
   <style>
-    /* ... 保留你原有的 CSS 样式不变 ... */
+    /* 基础样式复位 */
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'PingFang SC', sans-serif; background: #f5f7fa; color: #333; }
+    body { font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif; background: #f5f7fa; color: #333; line-height: 1.6; }
+    
+    /* 页眉设计 */
     header { background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 60px 20px; text-align: center; }
     header h1 { font-size: 2.5rem; margin-bottom: 10px; }
     header p { font-size: 1.1rem; opacity: 0.9; margin-bottom: 6px; }
+    
     .tag { display: inline-block; background: rgba(255,255,255,0.2); padding: 4px 14px; border-radius: 20px; margin: 4px; font-size: 0.9rem; }
+    
+    /* 容器与模块 */
     .container { max-width: 860px; margin: 0 auto; padding: 40px 20px; }
     .section { background: white; border-radius: 12px; padding: 30px; margin-bottom: 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
     .section h2 { font-size: 1.3rem; color: #667eea; margin-bottom: 20px; border-left: 4px solid #667eea; padding-left: 12px; }
-    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
-    .skill-card { background: #f8f9ff; border-radius: 10px; padding: 20px; }
+    
+    /* 技能网格 */
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; }
+    .skill-card { background: #f8f9ff; border-radius: 10px; padding: 20px; border: 1px solid #edf0ff; }
     .skill-card h3 { font-size: 1rem; margin-bottom: 8px; color: #444; }
-    .skill-card p { font-size: 0.88rem; color: #666; line-height: 1.6; }
-    .project { border-left: 3px solid #667eea; padding-left: 16px; margin-bottom: 20px; }
-    .project h3 { font-size: 1rem; font-weight: 600; margin-bottom: 4px; }
-    .project .meta { font-size: 0.82rem; color: #888; margin-bottom: 8px; }
-    .project ul { padding-left: 16px; }
-    .project ul li { font-size: 0.88rem; color: #555; line-height: 1.8; }
-    .contact-links { display: flex; gap: 16px; flex-wrap: wrap; }
-    .contact-links a { background: #667eea; color: white; padding: 10px 24px; border-radius: 8px; text-decoration: none; font-size: 0.9rem; }
-    footer { text-align: center; padding: 30px; color: #aaa; font-size: 0.85rem; }
+    .skill-card p { font-size: 0.88rem; color: #666; }
+    
+    /* 项目展示 */
+    .project { border-left: 3px solid #667eea; padding-left: 16px; margin-bottom: 25px; }
+    .project h3 { font-size: 1.1rem; font-weight: 600; margin-bottom: 4px; color: #222; }
+    .project .meta { font-size: 0.85rem; color: #888; margin-bottom: 10px; font-style: italic; }
+    .project ul { padding-left: 18px; }
+    .project ul li { font-size: 0.9rem; color: #555; margin-bottom: 6px; }
+    
+    /* 联系方式 */
+    .contact-links { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 10px; }
+    .contact-links a { background: #667eea; color: white; padding: 10px 24px; border-radius: 8px; text-decoration: none; font-size: 0.9rem; transition: background 0.3s; }
+    .contact-links a:hover { background: #5a6fd6; }
+    
+    footer { text-align: center; padding: 40px 20px; color: #aaa; font-size: 0.85rem; }
   </style>
 </head>
 <body>
@@ -58,11 +71,11 @@
       </div>
       <div class="skill-card">
         <h3>🤖 AI智能体</h3>
-        <p>具备 Prompt 优化经验，曾从0到1构建垂直领域知识库 Agent，效率提升50%。</p>
+        <p>具备 Prompt 优化经验，能独立完成 Coze 工作流搭建及知识库 Agent 构建。</p>
       </div>
       <div class="skill-card">
         <h3>💻 技术基础</h3>
-        <p>熟悉 Python 数据处理库；掌握 GitHub 版本管理及静态网页部署流程。</p>
+        <p>掌握 Python (Pandas/NumPy) 数据处理；熟悉 GitHub 版本管理与网页部署。</p>
       </div>
     </div>
   </div>
@@ -73,7 +86,7 @@
       <h3>知名零售品牌门店销售数据可视化决策支持</h3>
       <div class="meta">项目负责人 · 涉及约2万条原始销售数据分析</div>
       <ul>
-        <li>使用 SQL 完成多维度指标聚合，识别核心增长点。</li>
+        <li>使用 SQL 完成多维度指标聚合，准确识别核心销售增长点。</li>
         <li>通过 Tableau 搭建仪表盘，协助发现二线城市增长机会。</li>
         <li>提出的补货策略为门店提供了有力的数据决策支持。</li>
       </ul>
@@ -82,8 +95,8 @@
       <h3>基于垂直领域知识库的 AI Agent 构建</h3>
       <div class="meta">技术负责人 · Prompt Engineering 实践</div>
       <ul>
-        <li>通过优化提示词链路显著降低模型幻觉，检索准确率大幅提升。</li>
-        <li>实现团队文本处理流程标准化，效率提升约 50%。</li>
+        <li>通过优化提示词链路显著降低模型幻觉，检索准确率提升 40% 以上。</li>
+        <li>利用 Coze 平台搭建自动化流程，将团队文本处理效率提升约 50%。</li>
       </ul>
     </div>
   </div>
@@ -94,16 +107,16 @@
       <h3>某领先文化创意公司 · 运营助理</h3>
       <div class="meta">2025.04 - 2026.02</div>
       <ul>
-        <li>利用 Excel 数据透视表分析 200+ 客户行为特征。</li>
+        <li>利用 Excel 分析 200+ 客户行为特征，辅助调整社群运营方向。</li>
         <li>通过 A/B Test 优化策略，使社交账号互动率提升 20%。</li>
-        <li>将非结构化反馈转化为结构化建议，辅助 Leader 调整方向。</li>
+        <li>将非结构化反馈转化为结构化建议，为业务增长提供数据支撑。</li>
       </ul>
     </div>
   </div>
 
   <div class="section">
     <h2>联系与合作</h2>
-    <p style="margin-bottom:16px; color:#666;">欢迎沟通实习、网站搭建、数据分析或 AI 项目合作意向。</p>
+    <p style="margin-bottom:16px; color:#666;">欢迎通过以下方式与我联系，或使用右下角的 <b>AI 助理</b> 快速了解我的履历。</p>
     <div class="contact-links">
       <a href="#">💬 微信：(私聊获取)</a>
       <a href="mailto:your_email@example.com">📮 邮件：(私聊获取)</a>
@@ -113,7 +126,25 @@
 
 </div>
 
-<footer>© 2026 Yilin Xu · 用数字驱动价值</footer>
+<footer>© 2026 Yilin Xu · 用数字驱动价值 · Powered by Coze AI</footer>
 
+<script src="https://sf-cdn.coze.com/obj/unpkg-va/flow-platform/chat-app-sdk/1.2.0-beta.6/libs/oversea/index.js"></script>
+<script>
+  new CozeWebSDK.WebChatClient({
+    config: {
+      bot_id: '7639934397307469829', // 你的 Bot ID
+    },
+    componentProps: {
+      title: 'AI 简历助手', 
+    },
+    auth: {
+      type: 'token',
+      token: 'pat_*********', // 这里请确保使用你截图里生成的完整 token
+      onRefreshToken: function () {
+        return 'pat_*********'
+      }
+    }
+  });
+</script>
 </body>
 </html>
