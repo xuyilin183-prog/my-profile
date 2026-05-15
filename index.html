@@ -132,19 +132,18 @@
 <script>
   new CozeWebSDK.WebChatClient({
     config: {
-      bot_id: '7639934397307469829', // 你的 Bot ID
+      bot_id: '7639934397307469829',
     },
     componentProps: {
-      title: 'AI 简历助手', 
+      title: 'Yilin的AI助理', // 改成更个性的标题
+      layout: 'pc',         // 强制在电脑端显示更好的布局
     },
     auth: {
       type: 'token',
-      token: 'pat_*********', // 这里请确保使用你截图里生成的完整 token
+      token: '这里填入你Copy的pat开头的长字符串',
       onRefreshToken: function () {
-        return 'pat_*********'
+        return '这里填入和上面一样的pat字符串'
       }
     }
   });
 </script>
-</body>
-</html>
